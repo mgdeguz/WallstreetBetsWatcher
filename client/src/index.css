@@ -1,0 +1,55 @@
+/* CSS HEX */
+/* --chocolate-web: #D86301ff;
+#A8B3BDff;
+--silver-chalice: #AEAEACff;
+--ao-english: #1C8025ff;
+--azure: #1882F2ff;
+--firebrick: #B1121Dff;
+--black: #000000ff; */
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+th,
+td {
+  padding: 0 15px 0 15px;
+}
+
+th {
+  color: #AEAEACff;
+  padding-bottom: 7px;
+}
+
+td {
+  text-align: center;
+  color: #D86301ff;
+  font-size: 30px;
+  padding-bottom: 5px;
+}
+
+a {
+  color: #D86301ff;
+}
+
+.increase {
+  color: #1C8025ff;
+}
+
+.decrease {
+  color: #B1121Dff;
+}
+
+.neutral {
+  color: #A8B3BDff;
+}
