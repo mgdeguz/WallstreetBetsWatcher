@@ -17,5 +17,5 @@ services:
         volumes:
             - ./client:/usr/src/app
         ports:
-            - 5000:3000
+            - 5002:3000
             

@@ -1,7 +1,6 @@
 import praw
 import pandas as pd
 from finance import StockData
-from mylib import rust_split_str
 from sent_analyze import SIA
 from words import STOP_WORDS
 from words import TICKERS, remove_dollarsign, format_ticker
@@ -41,7 +40,7 @@ def analyze_subreddit(subreddit, queue, stock_sentiment, stock_data, limit=500):
     subreddit_content = chain(subreddit_submissions, subreddit_comments)
 
     for content in subreddit_content:
-        tokenized = rust_split_str(content)
+        tokenized = wordpunct_tokenize(content)
         if any([token in TICKERS and token not in STOP_WORDS for token in tokenized]):
             for word in tokenized:
                 if word in TICKERS and word not in STOP_WORDS:
@@ -65,7 +64,7 @@ def demo(subreddit, limit=500):
     subreddit_content = chain(subreddit_submissions, subreddit_comments)
 
     for content in subreddit_content:
-        tokenized = rust_split_str(content)
+        tokenized = wordpunct_tokenize(content)
         if any([token in TICKERS and token not in STOP_WORDS for token in tokenized]):
             score = SIA().polarity_scores(content)
             print(f"YES -- {colored(score['compound'], 'green')}")

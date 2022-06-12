@@ -1,6 +1,5 @@
 import nltk
 import ssl
-from nltk.tokenize import wordpunct_tokenize
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 
 try:
